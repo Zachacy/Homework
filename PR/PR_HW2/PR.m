@@ -1,0 +1,41 @@
+D1=0:0.01:10;
+D1=1./D1;
+D1(1:400)=0;
+SCALE1=1/0.9163;
+D1=D1.*SCALE1;
+D2=0:0.01:10;
+D2=1./(D2.*D2);
+D2(1:700)=0;
+SCALE2=70/3;
+D2=D2*SCALE2;
+D3=0:0.01:10;
+D3=1./(D3.*D3.*D3);
+D3(1:700)=0;
+SCALE3=9800/51;
+D3=D3*SCALE3;
+D4=0:0.01:10;
+D4=1./(D4.*D4.*D4.*D4);
+D4(1:800)=0;
+SCALE4=192000/61;
+D4=SCALE4*D4;
+X=0:0.01:10;
+plot(X,D1,'b',"linewidth",3);
+hold on
+plot(X,D2,'c',"linewidth",3);
+plot(X,D3,'g',"linewidth",3);
+plot(X,D4,'k',"linewidth",3);
+legend('D1','D2','D3','D4');
+ML(1:801)=0.125;
+ML(802:1001)=0;
+SCALEB=441.533;
+B4(1001)=0;
+for i=1000:-1:801;
+    B4(i)=sum(D4(i:1001))*(1/i);
+end
+B4(1:800)=B4(801);
+B4=B4/1.1;
+figure(2);
+plot(X,ML,'b',"linewidth",3);
+hold on
+plot(X,B4,'c',"linewidth",3);
+legend('ML','Bayes');

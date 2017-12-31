@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wang/Desktop/FLTK/src/main.cpp
+FL/Fl.H
+-
+FL/gl.h
+-
+FL/Fl_Gl_Window.H
+-
+FL/Fl_Choice.H
+-
+FL/Fl_Button.H
+-
+GL/glu.h
+-
+stdio.h
+-
+math.h
+-
+FL/Fl_Bitmap.H
+-
+FL/Fl_BMP_Image.H
+-
+FL/Fl_Box.H
+-
+vector
+-
+

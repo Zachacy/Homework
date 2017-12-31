@@ -1,0 +1,6 @@
+add_executable(FLTK main.cpp)
+find_package(FLTK REQUIRED)
+find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
+include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} ${FLTK_INCLUDE_DIRS})
+target_link_libraries(FLTK ${OPENGL_LIBRARIES} ${GLUT_LIBRARY} ${FLTK_LIBRARIES})

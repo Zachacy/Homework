@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/libSMFLoader.a  CMakeFiles/SMFLoader.dir/SMFLoader.cpp.o
+/usr/bin/ranlib ../../lib/libSMFLoader.a

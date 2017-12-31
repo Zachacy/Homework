@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/SMFLoader.h
+
+/home/wang/Desktop/FLTK_HW3/src/SMFLoader.cpp
+SMFLoader.h
+/home/wang/Desktop/FLTK_HW3/src/SMFLoader.h
+iostream
+-
+fstream
+-
+string.h
+-
+
